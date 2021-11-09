@@ -1,0 +1,44 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()"> <!-- (ngSubmit)="save($event)" -->
+  <p>
+    Region<br>
+    <select formControlName="category">
+      <option value="1">Valparaiso</option>
+      <option value="2">Metropolitana</option>
+      <option value="3">Bio Bio</option>
+      <option value="4">Araucania</option>
+    </select>
+  </p>
+
+  <p>
+    Estado del Clima<br>
+    <input type="radio" name="tiempo" formControlName="tiempo" value="soleado"> Soleado<br>
+      <input type="radio" name="tiempo" formControlName="tiempo" value="nublado"> Nublado<br>
+      <input type="radio" name="tiempo" formControlName="tiempo" value="lluvioso"> Lluvioso<br>
+      <input type="radio" name="tiempo" formControlName="tiempo" value="tormenta"> tormenta
+  </p>
+
+  <p>
+    Dia<br>
+    <select formControlName="semana">
+      <option value="Lunes">Lunes</option>
+      <option value="Martes">Martes</option>
+      <option value="Miercoles">Miercoles</option>
+      <option value="Jueves">Jueves</option>
+      <option value="Viernes">Viernes</option>
+      <option value="Sabado">Sabado</option>
+      <option value="Domingo">Domingo</option>
+    </select>
+  </p>
+  <p>
+    Temperatura: <br/>
+    <input formControlName="text">
+  </p>
+  <p>
+    Grados<br>
+    <input type="radio" name="grados" formControlName="grados" value="celsius"> Celsius<br>
+    <input type="radio" name="grados" formControlName="grados" value="faren"> Farenheit<br>
+  </p>
+  <!-- <ng-container *ngIf="category === 1"><app-valparaiso></app-valparaiso></ng-container> -->
+  <button type="submit">actualizar</button>
+
+</form>

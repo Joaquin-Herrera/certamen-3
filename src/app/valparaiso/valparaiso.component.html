@@ -1,0 +1,12 @@
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col" *ngFor="let item of dias">
+      <button type="button" class="btn btn-light" id="L" [routerLink]="['/edit/',item.day]" >{{item.day}}</button>
+      <img [src]="item.climaImg">
+      <p>{{item.temp}}</p>
+      <p>{{item.clima}}</p>
+    </div>
+  </div>
+</div>
